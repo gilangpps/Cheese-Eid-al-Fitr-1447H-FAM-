@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eid Photobooth</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="photobooth-container">
+        <h1>Eid Photobooth 1447H</h1>
+
+        <div class="camera-feed-area">
+            <video id="webcamFeed" autoplay playsinline muted></video>
+            <div id="countdown" class="hidden"></div>
+            <div id="photoTakenIndicator" class="hidden">Foto diambil!</div>
+            <canvas id="tempCanvas" class="hidden"></canvas> <!-- For processing individual photos -->
+        </div>
+
+        <div class="controls">
+            <div class="filter-control">
+                <label for="filterIntensity">Teal & Orange Filter Intensity:</label>
+                <input type="range" id="filterIntensity" min="0" max="100" value="0">
+            </div>
+            <div class="buttons">
+                <button id="captureButton">Ambil 3 Gambar Otomatis</button>
+                <button id="resetButton">Reset Pengambilan Gambar</button>
+                <button id="saveButton">Simpan Gambar</button>
+            </div>
+        </div>
+
+        <div class="captured-photos-preview">
+            <img id="preview1" class="hidden" alt="Captured Photo 1">
+            <img id="preview2" class="hidden" alt="Captured Photo 2">
+            <img id="preview3" class="hidden" alt="Captured Photo 3">
+        </div>
+
+        <div class="final-canvas-area">
+            <canvas id="finalCanvas" width="540" height="960"></canvas> <!-- 9:16 aspect ratio -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
