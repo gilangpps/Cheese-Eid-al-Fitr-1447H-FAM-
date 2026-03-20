@@ -61,7 +61,7 @@ A modern, interactive photobooth application for capturing and composing Eid Al 
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/cheese-eid-al-fitr-1447h.git
+   git clone https://github.com/gilangpps/Cheese-Eid-al-Fitr-1447H-FAM-.git
    cd cheese-eid-al-fitr-1447h
    ```
 
